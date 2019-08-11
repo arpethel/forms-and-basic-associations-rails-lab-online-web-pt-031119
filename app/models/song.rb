@@ -19,7 +19,7 @@ class Song < ActiveRecord::Base
      self.genre ? self.genre.name : nil
   end
 
-  def note_contents=(contents)
+  def note_contents=(notes)
     self.notes = Note.find_or_create_by(content: content)
   end
 
